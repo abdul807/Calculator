@@ -116,18 +116,18 @@ class Application(Frame):
         except SyntaxError as e:
             self.displaytext('invalid synthax')
             self.task=''
-
+#This function displays the answer
 
     def displaytext(self,value):
         self.user_input.delete(0,END)
         self.user_input.insert(0,value)
-
+#this function clears the data
     def cleardisplay(self):
         self.task=''
         self.user_input.delete(0,END)
         self.user_input.insert(0,'0')
 
-
+#this function helps with the clicks
     def buttonClick(self,number):
         self.task= str(self.task) + str(number)
         self.userin.set(self.task)
